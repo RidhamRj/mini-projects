@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+.navigation{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    transition: width 0.5s,height 0.5s;
+    transition-delay: 0s,0.75s;
+    z-index: 100000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.navigation> .box{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color:deeppink;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.box.active{
+    background-color: deepskyblue;
+}
+.navigation.active{
+    width: 250px;
+    height: 300px;
+    transition:height 0.5s,width 0.5s;
+    transition-delay: 0s,0.75s;
+}
+.navigation .box::before{
+    content: '+';
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 50px;
+    width: 50px;
+    transition: 0.5s;
+}
+.active::before{
+    transform: rotate(315deg);
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change bg</title>
+    <link rel="stylesheet" href="/drop down color change/color.css">
+</head>
+<body>
+    <section>
+        <div class="bg"></div>
+        <select name="" id="" class="color" onchange="change_color(this)">
+            <option value="#ff0000">Red</option>
+            <option value="#800080 ">Purple</option>
+            <option value="#ffff00">Yellow</option>
+            <option value="#00FF00">Green</option>
+            <option value="#FFC0CB">Pink</option>
+        </select>
+    </section>
+    <script>
+        function change_color(getColor){
+            let bg=document.querySelector('.bg')
+            let color=getColor.value
+            bg.style.background = color
+        }
+    </script>
+</body>
+</html>
